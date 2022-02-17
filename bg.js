@@ -38,12 +38,12 @@ function handleSymbol(value){
             break;
 
         case '=':
-            if(previousOperation=null){
+            if(previousOperation===null){
                 return;
             }
                 flushOperation(parseInt(buffer));
                 previousOperation= null;
-                buffer = ""+ runinngTotal;
+                buffer = " "+ runinngTotal;
                 runinngTotal =0;
             break;
 
@@ -52,7 +52,7 @@ function handleSymbol(value){
                 buffer="0";
             }
             else{
-                buffer = buffer.substring(0 ,buffer.length -1 );
+                buffer = buffer.substring(0 , buffer.length -1 );
             }
             break;
 
@@ -64,8 +64,9 @@ function handleSymbol(value){
 
 function handleMaths(value){
     const intBuffer = parseInt(buffer);
-    if(runinngTotal=0){
+    if(runinngTotal===0){
         runinngTotal=intBuffer;
+        console.log("here");
     }
     else{
         flushOperation(intBuffer);
@@ -76,16 +77,16 @@ function handleMaths(value){
 }
 
 function flushOperation(intBuffer){
-    if(previousOperation='+'){
+    if(previousOperation==='+'){
         runinngTotal += intBuffer; 
     }
-    else if(previousOperation='−'){
+    else if(previousOperation==='−'){
         runinngTotal -= intBuffer; 
     }   
-    else if(previousOperation='÷'){
+    else if(previousOperation==='÷'){
         runinngTotal /= intBuffer; 
     }   
-    else if(previousOperation='×'){
+    else if(previousOperation==='×'){
         runinngTotal *= intBuffer; 
     }   
    
