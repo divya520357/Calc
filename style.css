@@ -155,7 +155,7 @@ button{
     padding: 14px 28px;
     background-color: #d8d9db; */
     border: 1px solid black;
-    background-color: #d8d9db;
+    background-color: #79d9e3;
     color: black;
     /* padding: 14px 28px; */
     font-size: 16px;
@@ -165,23 +165,23 @@ button{
 }
 
 button:hover{
-    background-color: #ebebeb;
+    background-color: #99f0f9;
 }
 
 button:active{
-    background-color: #bbbcbe;
+    background-color: #56bbc6;
 }
 
 .one-block:last-child{
-    background-color: #df974c;
+    background-color: #e1619f;
     color: white;
 }
 
 .one-block:last-child:hover{
-    background-color: #dfb07e;
+    background-color: #ef8abb;
 }
 
 .one-block:last-child:active {
-    background-color: #dd8d37;
+    background-color: #c64c87;
 }
 
